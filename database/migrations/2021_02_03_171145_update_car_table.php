@@ -14,7 +14,8 @@ class UpdateCarTable extends Migration
     public function up()
     {
         Schema::table('car', function (Blueprint $table) {
-            
+            $table->integer('kilometers');
+            $table->dropColumn('user_id');
         });
     }
 
